@@ -2,11 +2,11 @@ const express = require("express");
 const routes = require("./routes");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const PORT = process.env.PORT || 3000;
 require("./database");
 
 const app = express();
 
-const port = 3000;
 app.use(cors());
 app.use(
   bodyParser.urlencoded({
@@ -17,6 +17,6 @@ app.use(bodyParser.json());
 
 app.use("/", routes);
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`Server is running on port ${port}`);
 });
