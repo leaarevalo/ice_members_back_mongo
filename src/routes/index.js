@@ -1,7 +1,12 @@
 const express = require("express");
-const usersRoutes = require("./users");
+const loginRoutes = require("./login");
+const membersRoutes = require("./members");
+const registerUserRoutes = require("./register");
 const router = express.Router();
 
-router.use("/members", usersRoutes);
+router.use("/login", loginRoutes);
+router.use("/members", membersRoutes);
+router.use("/register", registerUserRoutes);
+
 
 module.exports = router;

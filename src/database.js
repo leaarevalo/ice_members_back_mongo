@@ -1,10 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose
-  .connect(
-    "mongodb+srv://LeaArevalo:LeaArevaloAdmin123@ice.mfhbvhp.mongodb.net/ice_members?retryWrites=true&w=majority",
-    {}
-  )
+  .connect("mongodb://localhost:27017/ice_members", {})
   .then(() => {
     console.log("Database is connected");
   })
